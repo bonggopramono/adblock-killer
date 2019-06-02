@@ -1,0 +1,17 @@
+<html>
+Untuk menerapkan adblock killer pada blog, dilakukan dengan:
+[1] Meng-copy paste isi dari file adblock-killer.css ke template blog dan letakkan diantara <style> dan </style> atau <b:skin><![CDATA[ dan ]]></b:skin>
+[2] Letakkan kode berikut 
+
+/* Adblock Killer */
+<script type='text/javascript'>
+//<![CDATA[
+// Say Hi to Adblock
+function downloadJSAtOnload(){var e=document.createElement("script");e.src="ALAMAT_CDN_HOST_ANDA.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+//]]>
+</script>
+
+diatas </body>
+
+[3] Ganti ALAMAT_CDN_HOST_ANDA.js dengan alamat host CDN file adblock-killer.js tempat menyimpan file-nya
+</html>
