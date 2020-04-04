@@ -1,4 +1,4 @@
-! function() {
+!function() {
     function f() {
         var a = document.createElement("div");
         a.id = "adblock";
