@@ -1,16 +1,14 @@
 /* Adblock Killer */
 
 @keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%{opacity: 0;
+  transform: translateY(-20px);
 }
+
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}}
 
 @keyframes rubberBand {
   from {
@@ -41,25 +39,28 @@
     transform: scale3d(1,1,1);
   }
 }
-/* Say Hi to Adblock */
-#adblock-killer {
+
+
+#adblock {
   background: rgba(0,0,0,0.65);
   position: fixed;
   margin: auto;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom : 0;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   z-index: 999999;
   animation: fadeInDown 1s;
 }
 
-#adblock-killer .header {
-  margin: 0 0 15px 0;
+#adblock .header {
+  margin: 15px 0 15px 0;
 }
 
-#adblock-killer .inner {
+#adblock .inner {
   background: #e3482d;
   color: #fff;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -71,29 +72,30 @@
   animation: rubberBand 1s;
 }
 
-#adblock-killer button {
+#adblock button {
   padding: 10px 20px;
   border: 0;
   background: rgba(0,0,0,0.15);
   color: #fff;
   margin: 20px 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   cursor: pointer;
-  transition: all .3s;
+  transition: all .2s;
 }
 
-#adblock-killer button:hover {
+#adblock button:hover {
   background: rgba(0,0,0,0.35);
   color: #fff;
   outline: none;
 }
 
-#adblock-killer button.active,#adblock-killer button:hover.active {
+#adblock button.active,#adblock button:hover.active {
   background: #fff;
   color: #222;
   outline: none;
 }
 
-#adblock-killer .fixblock {
+#adblock .fixblock {
   background: #fff;
   text-align: left;
   color: #000;
@@ -103,22 +105,22 @@
   line-height: 30px;
 }
 
-#adblock-killer .fixblock div {
+#adblock .fixblock div {
   display: none;
 }
 
-#adblock-killer .fixblock div.active {
+#adblock .fixblock div.active {
   display: block;
 }
 
-#adblock-killer ol {
+#adblock ol {
   margin-left: 20px;
 }
 
-@media(max-width:768px) {
-  #adblock-killer .inner {
-    width: calc(100% - 20px);
+@media(max-width:680px) {
+  #adblock .inner {
+    width: calc(100% - 80px);
     margin: 10px auto;
-    padding: 15px;
+	padding: 20px;
   }
 }
