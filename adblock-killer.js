@@ -1,6 +1,3 @@
-<!-- Adblock Killer -->
-<script type='text/javascript'>
-//<![CDATA[
 ! function() {
     function f() {
         var a = document.createElement("div");
@@ -30,5 +27,3 @@
     var e = document.getElementsByTagName("script")[0];
     e.parentNode.insertBefore(b, e)
 }();
-//]]>
-</script>
